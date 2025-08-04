@@ -8,9 +8,11 @@ A 2D coffee ring effect simulator
 
 
 
-The coffee ring effect is a fascinating phenomenon in fluid dynamics and materials science! It occurs when a droplet of liquid containing suspended particles (like coffee) evaporates on a surface, leaving behind a ring-shaped stain rather than a uniform deposit.
+The coffee ring effect is a fascinating phenomenon in fluid dynamics and materials science. It occurs when a droplet of liquid containing suspended particles (like coffee) evaporates on a surface, leaving behind a ring-shaped stain rather than a uniform deposit.
 
-Here's how it works: When a coffee droplet sits on a surface, it has a curved edge where the liquid is thinner. This edge, called the contact line, becomes "pinned" to the surface due to surface tension and contamination. As the droplet evaporates, the liquid at the thin edges evaporates faster than at the thicker center. To replace this lost liquid, fluid flows outward from the center toward the edges, carrying suspended particles (coffee grounds, pigments, etc.) along with it.
+
+
+How does it works: When a coffee droplet sits on a surface, it has a curved edge where the liquid is thinner. This edge, called the contact line, becomes "pinned" to the surface due to surface tension and contamination. As the droplet evaporates, the liquid at the thin edges evaporates faster than at the thicker center. To replace this lost liquid, fluid flows outward from the center toward the edges, carrying suspended particles (coffee grounds, pigments, etc.) along with it.
 
 Since the contact line is pinned and can't move inward, all these particles get deposited at the edge as the liquid evaporates, creating the characteristic ring pattern. The center of the original droplet ends up with fewer particles, so it appears lighter.
 
@@ -25,10 +27,6 @@ Medical diagnostics (blood spot analysis)
 Manufacturing processes where uniform particle deposition is desired
 
 Art restoration and forensics
-
-
-
-Researchers have also found ways to suppress the coffee ring effect when uniform deposition is needed, using techniques like adding surfactants, changing particle shapes, or modifying evaporation conditions.
 
 
 
@@ -84,7 +82,33 @@ $$\\nabla \\cdot \\vec{v} = -\\frac{J(r)}{h(r)}$$
 
 
 
-In axisymmetric geometry, assuming thin film approximation:
+In axisymmetric geometry, with thin film approximation, the height of the droplet is assumed much smaller than its radius, i.e.:
+
+
+
+$$\\frac{h\_0}{R} \\ll 1$$
+
+
+
+This leads to a lubrication-type simplification of the Navier-Stokes equations and significantly reduces the complexity of fluid dynamics in the droplet.
+
+
+
+Further with simpler assumptions, i.e.:
+
+
+
+a. Axisymmteric geometry: The flow being predominant in the radial direction only.
+
+b. Negligible vertical inertia: Vertical pressure gradients are balanced by surface tension and hydrostatics, allowing vertical momentum equations to be ignored.
+
+
+
+c. Stokes flow: In radial direction, the velocity is governed by a balance of viscous and pressure forces, yielding field which is dependent only on radial position and height.
+
+
+
+This assumption holds true in case of droplet being shallow as compared to its lateral spread, low Reynolds number internal flow, making it suitable for capturing the effect of radial particle transport.
 
 
 
@@ -274,7 +298,19 @@ where $t\_{evap}$ is the total evaporation time.
 
 
 
-\## 9. Extensions and Modifications
+\## 9. Current limitations
+
+
+
+a. The model fails to accommodate steep contact angles ($$\\theta>30-40^{\\circ}$$) 
+
+b. Cannot capture vertical concentration gradients or Marangoni convection.
+
+c. Not suitable for modelling contact line dynamics with strong deformations or pinning hysteresis.
+
+
+
+\## 10. Possible modification
 
 
 
