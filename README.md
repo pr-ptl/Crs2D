@@ -302,7 +302,7 @@ where $t\_{evap}$ is the total evaporation time.
 
 
 
-a. The model fails to accommodate steep contact angles ($$\\theta>30-40^{\\circ}$$) 
+a. The model fails to accommodate steep contact angles ($$\\theta>30-40^{\\circ}$$)
 
 b. Cannot capture vertical concentration gradients or Marangoni convection.
 
@@ -324,13 +324,13 @@ $$\\frac{\\partial c}{\\partial t} + \\nabla \\cdot (c\\vec{v}) = D\\nabla^2 c +
 
 \### Particle-Particle Interactions:
 
-Modify diffusion coefficient: $D = D\_0(1 + f(c))$
+Modified diffusion coefficient: $D = D\_0(1 + f(c))$
 
 
 
 \### Contact Line Dynamics:
 
-Allow contact line motion: $\\frac{dR}{dt} = g(h, \\theta, J)$
+Allowing contact line motion: $\\frac{dR}{dt} = g(h, \\theta, J)$
 
 
 
